@@ -5,7 +5,9 @@ CONFIG -= qt
 
 SOURCES += \
         main.cpp \
-        sortHelper.cpp
+        sortHelper.cpp \
+        timer.cpp
 
 HEADERS += \
-    sortHelper.h
+    sortHelper.h \
+    timer.h
