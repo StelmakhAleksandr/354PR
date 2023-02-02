@@ -1,8 +1,14 @@
 #include "app.h"
+#include <vector>
+using namespace std;
 
-int main()
-{
-    App::getInstance()->run();
+#include "decorator/coffee.h"
+#include "decorator/milk.h"
+#include "decorator/sugar.h"
+#include "decorator/tea.h"
 
-    return 0;
+int main() {
+  Beverage *coffee = new Milk(new Sugar(new Sugar(new Coffee())));
+  coffee->display();
+  return 0;
 }
